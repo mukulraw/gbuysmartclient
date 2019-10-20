@@ -2,7 +2,9 @@ package com.mrtecks.epickmartclient;
 
 
 import com.mrtecks.epickmartclient.loginPOJO.loginBean;
+import com.mrtecks.epickmartclient.orderDetailsPOJO.orderDetailsBean;
 import com.mrtecks.epickmartclient.orders1POJO.orders1Bean;
+import com.mrtecks.epickmartclient.ordersPOJO.ordersBean;
 
 import retrofit2.Call;
 import retrofit2.http.GET;
@@ -32,6 +34,24 @@ public interface AllApiIneterface {
     Call<orders1Bean> getOrders2(
             @Part("sid") String sid,
             @Part("date") String date
+    );
+
+    @Multipart
+    @POST("grocery/api/getOrders3.php")
+    Call<ordersBean> getOrders(
+            @Part("date") String date
+    );
+
+    @Multipart
+    @POST("grocery/api/getOrders4.php")
+    Call<ordersBean> getOrders4(
+            @Part("date") String date
+    );
+
+    @Multipart
+    @POST("grocery/api/getOrderDetails.php")
+    Call<orderDetailsBean> getOrderDetails(
+            @Part("order_id") String order_id
     );
 
     //@GET("grocery/api/getHome.php")
