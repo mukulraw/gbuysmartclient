@@ -151,12 +151,11 @@ public class MainActivity extends AppCompatActivity {
         public Fragment getItem(int i) {
 
             if (i == 0) {
-
                 return new Bills();
             }
             else
             {
-                return new Bills();
+                return new Bills1();
             }
         }
 

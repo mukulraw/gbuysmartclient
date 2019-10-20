@@ -5,7 +5,6 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
-import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -18,7 +17,6 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.TextView;
-
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -45,7 +43,7 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 import retrofit2.converter.scalars.ScalarsConverterFactory;
 
-public class Bills extends Fragment {
+public class Bills1 extends Fragment {
 
 
     RecyclerView grid;
@@ -127,7 +125,7 @@ public class Bills extends Fragment {
                         AllApiIneterface cr = retrofit.create(AllApiIneterface.class);
 
 
-                        Call<orders1Bean> call = cr.getOrders1(SharePreferenceUtils.getInstance().getString("id"), dd);
+                        Call<orders1Bean> call = cr.getOrders2(SharePreferenceUtils.getInstance().getString("id"), dd);
 
                         call.enqueue(new Callback<orders1Bean>() {
                             @Override
@@ -208,7 +206,7 @@ public class Bills extends Fragment {
         AllApiIneterface cr = retrofit.create(AllApiIneterface.class);
 
 
-        Call<orders1Bean> call = cr.getOrders1(SharePreferenceUtils.getInstance().getString("id"), dd);
+        Call<orders1Bean> call = cr.getOrders2(SharePreferenceUtils.getInstance().getString("id"), dd);
 
         call.enqueue(new Callback<orders1Bean>() {
             @Override
@@ -274,7 +272,6 @@ public class Bills extends Fragment {
             holder.status.setText(item.getStatus());
 
 
-
         }
 
         @Override
@@ -296,7 +293,6 @@ public class Bills extends Fragment {
                 name = itemView.findViewById(R.id.textView3);
                 address = itemView.findViewById(R.id.textView4);
                 status = itemView.findViewById(R.id.textView5);
-
 
             }
         }
