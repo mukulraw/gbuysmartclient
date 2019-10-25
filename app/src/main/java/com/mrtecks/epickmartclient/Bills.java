@@ -266,10 +266,10 @@ public class Bills extends Fragment {
             ImageLoader loader = ImageLoader.getInstance();
             loader.displayImage(item.getImage() , holder.image , options);
 
-            holder.quantity.setText("Quantity - " + item.getQuantity());
-            holder.title.setText(item.getPname());
-            holder.price.setText("Price - " + item.getPrice());
-            holder.name.setText("Customer - " + item.getUsername());
+            holder.quantity.setText(item.getPname());
+            holder.title.setText("#" + item.getAddress());
+            holder.price.setText("Quantity - " + item.getQuantity());
+            holder.name.setText("Price - " + item.getPrice());
             holder.address.setText("Address - " + item.getAddress());
             holder.status.setText(item.getStatus());
 
