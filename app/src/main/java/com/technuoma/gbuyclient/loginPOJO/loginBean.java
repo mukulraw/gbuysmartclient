@@ -1,11 +1,9 @@
-package com.technuoma.emartclient.orders1POJO;
+package com.technuoma.gbuyclient.loginPOJO;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-import java.util.List;
-
-public class orders1Bean {
+public class loginBean {
     @SerializedName("status")
     @Expose
     private String status;
@@ -14,7 +12,7 @@ public class orders1Bean {
     private String message;
     @SerializedName("data")
     @Expose
-    private List<Datum> data = null;
+    private Data data;
 
     public String getStatus() {
         return status;
@@ -32,11 +30,11 @@ public class orders1Bean {
         this.message = message;
     }
 
-    public List<Datum> getData() {
+    public Data getData() {
         return data;
     }
 
-    public void setData(List<Datum> data) {
+    public void setData(Data data) {
         this.data = data;
     }
 }

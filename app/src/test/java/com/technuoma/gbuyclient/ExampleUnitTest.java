@@ -1,4 +1,4 @@
-package com.technuoma.emartclient;
+package com.technuoma.gbuyclient;
 
 import org.junit.Test;
 

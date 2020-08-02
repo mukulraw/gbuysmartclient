@@ -1,4 +1,4 @@
-package com.technuoma.emartclient;
+package com.technuoma.gbuyclient;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -11,7 +11,7 @@ import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
-import com.technuoma.emartclient.loginPOJO.loginBean;
+import com.technuoma.gbuyclient.loginPOJO.loginBean;
 
 import retrofit2.Call;
 import retrofit2.Callback;

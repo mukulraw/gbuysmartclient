@@ -1,4 +1,4 @@
-package com.technuoma.emartclient;
+package com.technuoma.gbuyclient;
 
 import android.app.Dialog;
 import android.content.BroadcastReceiver;
@@ -26,8 +26,8 @@ import androidx.localbroadcastmanager.content.LocalBroadcastManager;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.technuoma.emartclient.orders1POJO.Datum;
-import com.technuoma.emartclient.orders1POJO.orders1Bean;
+import com.technuoma.gbuyclient.orders1POJO.Datum;
+import com.technuoma.gbuyclient.orders1POJO.orders1Bean;
 import com.nostra13.universalimageloader.core.DisplayImageOptions;
 import com.nostra13.universalimageloader.core.ImageLoader;
 

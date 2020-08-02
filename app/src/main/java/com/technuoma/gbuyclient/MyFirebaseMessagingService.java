@@ -1,4 +1,4 @@
-package com.technuoma.emartclient;
+package com.technuoma.gbuyclient;
 
 import android.app.ActivityManager;
 import android.app.NotificationChannel;
@@ -81,7 +81,7 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
         {
             builder = new NotificationCompat.Builder(Bean.getContext(), idChannel);
             builder.setContentTitle(Bean.getContext().getString(R.string.app_name))
-                    .setSmallIcon(R.drawable.dddd)
+                    .setSmallIcon(R.drawable.back)
                     .setAutoCancel(true)
                     .setContentIntent(pendingIntent)
                     .setStyle(new NotificationCompat.BigTextStyle()
@@ -92,7 +92,7 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
         {
             builder = new NotificationCompat.Builder(Bean.getContext(), idChannel);
             builder.setContentTitle(Bean.getContext().getString(R.string.app_name))
-                    .setSmallIcon(R.drawable.dddd)
+                    .setSmallIcon(R.drawable.back)
                     .setContentIntent(pendingIntent)
                     .setStyle(new NotificationCompat.BigTextStyle()
                             .bigText(Html.fromHtml(message)))

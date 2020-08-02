@@ -1,4 +1,4 @@
-package com.technuoma.emartclient.orders1POJO;
+package com.technuoma.gbuyclient.orders1POJO;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;

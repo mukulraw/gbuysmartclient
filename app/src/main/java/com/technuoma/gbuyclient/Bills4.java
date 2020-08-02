@@ -1,4 +1,4 @@
-package com.technuoma.emartclient;
+package com.technuoma.gbuyclient;
 
 import android.app.Dialog;
 import android.content.BroadcastReceiver;
@@ -24,8 +24,8 @@ import androidx.localbroadcastmanager.content.LocalBroadcastManager;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.technuoma.emartclient.ordersPOJO.Datum;
-import com.technuoma.emartclient.ordersPOJO.ordersBean;
+import com.technuoma.gbuyclient.ordersPOJO.Datum;
+import com.technuoma.gbuyclient.ordersPOJO.ordersBean;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -40,7 +40,7 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 import retrofit2.converter.scalars.ScalarsConverterFactory;
 
-public class Bills3 extends Fragment {
+public class Bills4 extends Fragment {
 
 
     RecyclerView grid;
@@ -122,7 +122,7 @@ public class Bills3 extends Fragment {
                         AllApiIneterface cr = retrofit.create(AllApiIneterface.class);
 
 
-                        Call<ordersBean> call = cr.getOrders(dd);
+                        Call<ordersBean> call = cr.getOrders4(dd);
 
                         call.enqueue(new Callback<ordersBean>() {
                             @Override
@@ -203,7 +203,7 @@ public class Bills3 extends Fragment {
         AllApiIneterface cr = retrofit.create(AllApiIneterface.class);
 
 
-        Call<ordersBean> call = cr.getOrders(dd);
+        Call<ordersBean> call = cr.getOrders4(dd);
 
         call.enqueue(new Callback<ordersBean>() {
             @Override
@@ -266,7 +266,6 @@ public class Bills3 extends Fragment {
             holder.slot.setText(item.getSlot());
             holder.amount.setText("\u20B9 " + item.getAmount());
 
-            holder.deldate.setText(item.getDelivery_date());
 
             holder.itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -288,7 +287,7 @@ public class Bills3 extends Fragment {
         }
 
         class ViewHolder extends RecyclerView.ViewHolder {
-            TextView txn , date , status , name , address , amount , pay , slot , deldate;
+            TextView txn , date , status , name , address , amount , pay , slot;
 
 
             ViewHolder(@NonNull View itemView) {
@@ -301,8 +300,7 @@ public class Bills3 extends Fragment {
                 address = itemView.findViewById(R.id.textView34);
                 amount = itemView.findViewById(R.id.textView30);
                 pay = itemView.findViewById(R.id.textView40);
-                slot = itemView.findViewById(R.id.textView62);
-                deldate = itemView.findViewById(R.id.textView42);
+                slot = itemView.findViewById(R.id.textView42);
 
 
             }
