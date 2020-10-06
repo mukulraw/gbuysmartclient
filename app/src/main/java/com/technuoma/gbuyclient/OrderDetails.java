@@ -154,6 +154,7 @@ public class OrderDetails extends AppCompatActivity {
             holder.quantity.setText("Quantity - " + item.getQuantity());
             holder.title.setText(item.getName());
             holder.price.setText("Price - " + item.getPrice());
+            holder.size.setText("Size - " + item.getSize());
 
 
 
@@ -168,7 +169,7 @@ public class OrderDetails extends AppCompatActivity {
         {
 
             ImageView image;
-            TextView quantity, title , price;
+            TextView quantity, title , price, size;
 
             public ViewHolder(@NonNull View itemView) {
                 super(itemView);
@@ -177,6 +178,7 @@ public class OrderDetails extends AppCompatActivity {
                 title = itemView.findViewById(R.id.textView17);
                 quantity = itemView.findViewById(R.id.textView18);
                 price = itemView.findViewById(R.id.textView19);
+                size = itemView.findViewById(R.id.textView6);
 
 
             }

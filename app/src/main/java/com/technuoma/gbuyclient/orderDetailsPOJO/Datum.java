@@ -25,6 +25,9 @@ public class Datum {
     @SerializedName("image")
     @Expose
     private String image;
+    @SerializedName("size")
+    @Expose
+    private String size;
 
     public String getOrderId() {
         return orderId;
@@ -80,5 +83,13 @@ public class Datum {
 
     public void setImage(String image) {
         this.image = image;
+    }
+
+    public String getSize() {
+        return size;
+    }
+
+    public void setSize(String size) {
+        this.size = size;
     }
 }
